@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:moody_app/pages/home_screen/home_screen.dart';
+import 'package:moody_app/main_layout.dart';
+import 'package:moody_app/pages/home/home_screen.dart';
 import 'package:moody_app/pages/onboardings_screen/onboarding_screen.dart';
 import 'package:moody_app/themes/styles.dart';
 import 'package:moody_app/utils/utility.dart';
@@ -25,7 +26,10 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       initialRoute: startRoute,
       getPages: [
-        GetPage(name: "/home", page: () => HomeScreen()),
+        GetPage(
+          name: "/home",
+          page: () => MainLayout(child: HomeScreen()),
+        ),
         GetPage(name: "/onboarding", page: () => OnboardingScreen()),
       ],
     );

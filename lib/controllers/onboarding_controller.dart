@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moody_app/pages/home_screen/home_screen.dart';
+import 'package:moody_app/pages/home/home_screen.dart';
 import 'package:moody_app/utils/utility.dart';
 
 class OnboardingController extends GetxController {
@@ -9,7 +9,7 @@ class OnboardingController extends GetxController {
 
   void onEnd() async {
     await Utility.setSharedPreference("onBoardingStatus", true);
-    Get.offAll(HomeScreen());
+    Get.offAll("/home");
   }
 
   void nextPage(int length) {
