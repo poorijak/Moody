@@ -9,7 +9,7 @@ class OnboardingController extends GetxController {
 
   void onEnd() async {
     await Utility.setSharedPreference("onBoardingStatus", true);
-    Get.offAll("/home");
+    Get.offAll(HomeScreen());
   }
 
   void nextPage(int length) {

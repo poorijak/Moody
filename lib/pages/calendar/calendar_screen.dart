@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CalendarScreen extends StatelessWidget {
-const CalendarScreen({ Key? key }) : super(key: key);
+  const CalendarScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
-    return Center(child: Text("Calendar"),);
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text("Calendar"),
+      ),
+    );
   }
 }

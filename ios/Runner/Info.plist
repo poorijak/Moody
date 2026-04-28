@@ -59,6 +59,8 @@
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
 		</array>
+		<key>NSMotionUsageDescription</key>
+		<string>ขออนุญาตใช้ Sensor เพื่อตรวจจับการเขย่าสำหรับแอป Moody ครับ</string>
 		<key>UISupportedInterfaceOrientations~ipad</key>
 		<array>
 			<string>UIInterfaceOrientationPortrait</string>
