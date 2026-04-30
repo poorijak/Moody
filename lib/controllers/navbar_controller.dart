@@ -7,7 +7,7 @@ import 'package:moody_app/pages/home/home_screen.dart';
 class NavbarController extends GetxController {
   RxInt selectedIndex = 0.obs;
 
-  final screens = [const HomeScreen(), const CalendarScreen()];
+  final screens = [HomeScreen(), CalendarScreen()];
 
   RxInt currentIconIndex = 0.obs;
   Timer? _timer;

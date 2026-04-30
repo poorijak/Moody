@@ -6,12 +6,16 @@ import 'package:moody_app/pages/add_mood%20/add_mood_screen.dart';
 import 'package:moody_app/pages/home/home_screen.dart';
 import 'package:moody_app/pages/onboardings_screen/onboarding_screen.dart';
 import 'package:moody_app/themes/styles.dart';
+import 'package:moody_app/utils/seeder.dart';
 import 'package:moody_app/utils/utility.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox('moody_app');
+  
+  // เรียกใช้งาน Seeder เพื่อยัด Mock Data
+  await HiveSeeder.seedMockData();
   await Utility.initSharedPrefs();
   bool isOnboarded = Utility.getSharedPreference("onBoardingStatus") ?? false;
 
